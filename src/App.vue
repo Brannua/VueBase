@@ -8,6 +8,8 @@
     <!-- <ListDemo/> -->
     <!-- <TplDemo/> -->
     <!-- <WatchDemo/> -->
+
+    <ComponentDemo/>
   </div>
 </template>
 
@@ -21,6 +23,8 @@
 // import TplDemo from './components/BaseUse/TplDemo'
 // import WatchDemo from './components/BaseUse/WatchDemo'
 
+import ComponentDemo from './components/ComponentsDemo/Index'
+
 export default {
   name: 'App',
   components: {
@@ -32,6 +36,8 @@ export default {
     // ListDemo,
     // TplDemo,
     // WatchDemo,
+
+    ComponentDemo,
   }
 }
 </script>
