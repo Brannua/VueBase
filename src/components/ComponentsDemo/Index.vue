@@ -39,6 +39,18 @@ export default {
     deleteHandler(id) {
       this.list = this.list.filter(item => item.id !== id)
     }
+  },
+  created() {
+    console.log('index created')
+  },
+  mounted() {
+    console.log('index mounted')
+  },
+  beforeUpdate() {
+    console.log('index before updated')
+  },
+  updated( ) {
+    console.log('index updated')
   }
 }
 </script>

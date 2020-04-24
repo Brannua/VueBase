@@ -37,12 +37,21 @@ export default {
       console.log('on add title', title)
     }
   },
+  created() {
+    console.log('list created')
+  },
   mounted() {
     // eslint-disable-next-line
     console.log('list mounted')
 
     // 绑定自定义事件
     event.$on('onAddTitle', this.addTitleHandler)
+  },
+  beforeUpdate() {
+    console.log('list before updated')
+  },
+  updated( ) {
+    console.log('list updated')
   },
   beforeDestroy() {
     // 及时解绑自定义事件，否则可能造成内存泄露
