@@ -13,6 +13,8 @@
 
 <script>
 
+import event from './event'
+
 export default {
   // 接收父组件的数据
   props: {
@@ -27,7 +29,24 @@ export default {
     deleteItem(id) {
       // 调用父组件的事件
       this.$emit('delete', id)
+    },
+
+    // 自定义事件
+    addTitleHandler(title) {
+      // eslint-disable-next-line
+      console.log('on add title', title)
     }
+  },
+  mounted() {
+    // eslint-disable-next-line
+    console.log('list mounted')
+
+    // 绑定自定义事件
+    event.$on('onAddTitle', this.addTitleHandler)
+  },
+  beforeDestroy() {
+    // 及时解绑自定义事件，否则可能造成内存泄露
+    event.$off('onAddTitle', this.addTitleHandler)
   }
 }
 </script>
