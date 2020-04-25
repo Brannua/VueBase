@@ -9,7 +9,10 @@
     <!-- <TplDemo/> -->
     <!-- <WatchDemo/> -->
 
-    <ComponentDemo/>
+    <!-- <ComponentDemo/> -->
+
+    <AdvancedUse/>
+
   </div>
 </template>
 
@@ -23,7 +26,9 @@
 // import TplDemo from './components/BaseUse/TplDemo'
 // import WatchDemo from './components/BaseUse/WatchDemo'
 
-import ComponentDemo from './components/ComponentsDemo/Index'
+// import ComponentDemo from './components/ComponentsDemo/Index'
+
+import AdvancedUse from './components/AdvancedUse/Index'
 
 export default {
   name: 'App',
@@ -37,7 +42,9 @@ export default {
     // TplDemo,
     // WatchDemo,
 
-    ComponentDemo,
+    // ComponentDemo,
+
+    AdvancedUse,
   }
 }
 </script>
