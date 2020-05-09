@@ -17,12 +17,12 @@ export default {
   },
   methods: {
     addTitle() {
-      // 调用父组件的事件
+      // 调用父组件的事件 ( 向list增加数据 )
       this.$emit('add', this.title)
-      this.title = ''
-
-      // 调用自定义事件
+      // 调用和List组件通信的自定义事件
       event.$emit('onAddTitle', this.title)
+      // 清空输入框
+      this.title = ''
     }
   }
 }

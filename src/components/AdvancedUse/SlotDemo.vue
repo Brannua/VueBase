@@ -11,7 +11,3 @@ export default {
   props: ["url"]
 }
 </script>
-
-<style>
-
-</style>

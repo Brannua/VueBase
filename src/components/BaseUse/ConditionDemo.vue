@@ -1,5 +1,7 @@
 <template>
   <div>
+    <input v-model="type">
+
     <p v-if="type === 'a'">A</p>
     <p v-else-if="type === 'b'">B</p>
     <p v-else>other</p>
@@ -18,7 +20,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

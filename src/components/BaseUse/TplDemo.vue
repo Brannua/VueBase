@@ -1,14 +1,21 @@
 <template>
   <div>
-    <p>文本差值 {{ message }}</p>
-    <p>JS 表达式 {{ flag ? 'yes' : 'no' }} ( 只能是表达式，不能是 js 语句 )</p>
-    <p :id="dynamicId">动态属性 id</p>
+    <p class="yellow">文本插值</p>
+    <p>{{ message }}</p>
+    <br/>
 
-    <hr/>
+    <p class="yellow">JS 表达式 只能是表达式，不能是 js 语句</p>
+    <p>{{ flag ? 'yes' : 'no' }}</p>
+    <br/>
 
+    <p class="yellow">动态属性 id</p>
+    <p :id="dynamicId">demo-dynamic-attr</p>
+    <br/>
+
+    <p class="yellow">【注意】使用 v-html 之后，有 xss 风险，且会覆盖子元素</p>
     <p v-html="rawHtml">
-      <span>有 xss 风险</span>
-      <span>【注意】使用 v-html 之后，将会覆盖子元素</span>
+      <span>此元素被覆盖</span>
+      <span>此元素被覆盖</span>
     </p>
   </div>
 </template>
@@ -19,13 +26,15 @@ export default {
     return {
       message: 'hello world',
       flag: true,
-      rawHtml: '指令 - 原始 html <b>加粗</b> <i>斜体</i>',
-      dynamicId: `id-${Date.now()}`
+      dynamicId: `id-${Date.now()}`,
+      rawHtml: '本元素覆盖了原来的子元素'
     }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+.yellow {
+  background-color: #ff0;
+}
 </style>

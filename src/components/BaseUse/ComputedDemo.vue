@@ -13,13 +13,18 @@ export default {
       num: 20
     }
   },
+  methods: {
+    double() {
+      return this.num * 2
+    }
+  },
   computed: {
     double1() {
-      return this.num * 2
+      return this.double()
     },
     double2: {
       get() {
-        return this.num * 2
+        return this.double()
       },
       set(val) {
         this.num = val / 2
@@ -28,7 +33,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

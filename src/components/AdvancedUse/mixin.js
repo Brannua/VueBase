@@ -1,3 +1,6 @@
+/**
+ * @desc 提取出来的公共逻辑
+ */
 export default {
   data() {
     return {

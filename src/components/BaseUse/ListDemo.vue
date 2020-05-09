@@ -3,14 +3,14 @@
     <p>遍历数组</p>
     <ul>
       <li v-for="(item, index) in listArr" :key="item.id">
-        {{ index }} -- {{ item.title }} -- {{ item.id }}
+        {{ item.id }} -- {{ item.title }} -- {{ index }}
       </li>
     </ul>
 
     <p>遍历对象</p>
     <ul>
       <li v-for="(val, key, index) in listObj" :key="key">
-        {{ index }} -- {{ key }} -- {{ val.title }}
+        {{ val.title }} -- {{ key }} -- {{ index }}
       </li>
     </ul>
   </div>
@@ -35,7 +35,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

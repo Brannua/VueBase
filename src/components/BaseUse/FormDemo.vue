@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>输入框: {{ name }}</p>
+    <input type="text" v-model="name">
     <input type="text" v-model.trim="name">
     <input type="text" v-model.lazy="name">
     <input type="text" v-model.number="age">
@@ -14,17 +15,17 @@
 
     <p>多个复选框: {{ checkedNames }}</p>
     <label for="jack">Jack</label>
-    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+    <input id="jack" type="checkbox" value="Jack" v-model="checkedNames">
     <label for="join">Join</label>
-    <input type="checkbox" id="join" value="Join" v-model="checkedNames">
+    <input id="join" type="checkbox" value="Join" v-model="checkedNames">
     <label for="mike">Mike</label>
-    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+    <input id="mike" type="checkbox" value="Mike" v-model="checkedNames">
 
     <p>单选 {{ gender }}</p>
     <label for="male">男</label>
-    <input type="radio" id="male" value="male" v-model="gender">
+    <input id="male" type="radio" value="male" v-model="gender">
     <label for="female">女</label>
-    <input type="radio" id="female" value="female" v-model="gender">
+    <input id="female" type="radio" value="female" v-model="gender">
 
     <p>下拉列表选择 {{ selected }}</p>
     <select v-model="selected">
@@ -58,13 +59,8 @@ export default {
       gender: 'male',
 
       selected: '',
-      selectedList: [],
-
+      selectedList: []
     }
   }
 }
 </script>
-
-<style>
-
-</style>

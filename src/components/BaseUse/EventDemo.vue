@@ -16,26 +16,22 @@ export default {
   methods: {
     increment1(event) {
       this.num ++
-      // eslint-disable-next-line
-      console.log('event', event, event.__proto__.constructor)
-      // eslint-disable-next-line
-      console.log(event.target)
-      // eslint-disable-next-line
-      console.log(event.currentTarget)
-
-      /* 结论 */
-      // 1. event是原生的
-      // 2. 事件被挂载到当前元素
+      this._logEventMsg(event)
     },
     increment2(val, event) {
-      // eslint-disable-next-line
       this.num = this.num + val
-      console.log(event.target)
+      this._logEventMsg(event)
+    },
+    _logEventMsg(even) {
+      console.log(even)
+      console.log(even.target)
+      console.log(even.currentTarget)
+      console.log(even.__proto__.constructor)
     }
   }
 }
+
+/* 结论 */
+// 1. event是原生的
+// 2. 事件被挂载到当前元素
 </script>
-
-<style>
-
-</style>

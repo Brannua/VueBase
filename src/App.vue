@@ -9,7 +9,7 @@
     <!-- <TplDemo/> -->
     <!-- <WatchDemo/> -->
 
-    <!-- <ComponentDemo/> -->
+    <!-- <ComponentDemo v-if="notDestory"/> -->
 
     <AdvancedUse/>
 
@@ -45,6 +45,11 @@ export default {
     // ComponentDemo,
 
     AdvancedUse,
+  },
+  data() {
+    return {
+      notDestory: true
+    }
   }
 }
 </script>

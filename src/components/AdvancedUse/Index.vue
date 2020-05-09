@@ -12,11 +12,13 @@
     <!-- <NextTick/> -->
 
 
-    <!-- <SlotDemo :url="website.url"> -->
-      <!-- {{ website.title }} -->
-    <!-- </SlotDemo> -->
+    <!-- 普通插槽 -->
+    <SlotDemo :url="website.url">
+      {{ website.title }}
+    </SlotDemo>
 
 
+    <!-- 作用域插槽 -->
     <!-- <ScopedSlotDemo> -->
       <!-- <template v-slot="zzz"> -->
         <!-- <a :href="zzz.xxx.url"> -->
@@ -26,6 +28,7 @@
     <!-- </ScopedSlotDemo> -->
 
 
+    <!-- 具名插槽 -->
     <!-- <NamedSlotDemo> -->
       <!-- <template v-slot:header> -->
         <!-- <h1>将插入到 header slot 中</h1> -->
@@ -34,6 +37,7 @@
         <!-- <h1>将插入到 footer slot 中</h1> -->
       <!-- </template> -->
     <!-- </NamedSlotDemo> -->
+
 
     <!-- 动态组件 -->
     <!-- <component :is="nextTickName"/> -->
@@ -48,7 +52,7 @@
     <!-- <KeepAlive/> -->
 
 
-    <MixinDemo/>
+    <!-- <MixinDemo/> -->
 
   </div>
 </template>
@@ -57,7 +61,8 @@
 
 // import CustomVModel from './CustomVModel'
 // import NextTick from './NextTick'
-// import SlotDemo from './SlotDemo'
+
+import SlotDemo from './SlotDemo'
 // import ScopedSlotDemo from './ScopedSlotDemo'
 // import NamedSlotDemo from './NamedSlotDemo'
 
@@ -67,27 +72,26 @@
 // // 具有缓存功能的组件
 // import KeepAlive from './KeepAlive'
 
-
-import MixinDemo from './MixinDemo'
+// import MixinDemo from './MixinDemo'
 
 export default {
   components: {
     // CustomVModel,
     // NextTick,
-    // SlotDemo,
+    SlotDemo,
     // ScopedSlotDemo,
     // NamedSlotDemo,
 
     // // 动态组件
     // NextTick,
 
-    // // 异步组件
+    // // 异步组件( 多用于异步加载大组件，以提高性能 )
     // FormDemo: () => import('../BaseUse/FormDemo')
 
     // // 具有缓存功能的组件
     // KeepAlive,
 
-    MixinDemo,
+    // MixinDemo,
   },
   data() {
     return {
@@ -107,7 +111,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
