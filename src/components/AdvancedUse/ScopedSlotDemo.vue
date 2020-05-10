@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot :xxx="website"></slot>
+    <slot :xxx="name"></slot>
   </div>
 </template>
 
@@ -8,11 +8,7 @@
 export default {
   data() {
     return {
-      website: {
-        title: 'brannua',
-        subTitle: 'my github',
-        url: 'https://www.github.com/brannua'
-      }
+      name: 'lpj'
     }
   }
 }

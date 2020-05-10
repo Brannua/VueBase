@@ -13,30 +13,28 @@
 
 
     <!-- 普通插槽 -->
-    <SlotDemo :url="website.url">
-      {{ website.title }}
-    </SlotDemo>
+    <!-- <SlotDemo :url="website.url"> -->
+      <!-- {{ website.title }} -->
+    <!-- </SlotDemo> -->
 
 
     <!-- 作用域插槽 -->
     <!-- <ScopedSlotDemo> -->
       <!-- <template v-slot="zzz"> -->
-        <!-- <a :href="zzz.xxx.url"> -->
-          <!-- {{ zzz.xxx.title }} -->
-        <!-- </a> -->
+        <!-- {{ zzz.xxx }} -->
       <!-- </template> -->
     <!-- </ScopedSlotDemo> -->
 
 
     <!-- 具名插槽 -->
-    <!-- <NamedSlotDemo> -->
-      <!-- <template v-slot:header> -->
-        <!-- <h1>将插入到 header slot 中</h1> -->
-      <!-- </template> -->
-      <!-- <template v-slot:footer> -->
-        <!-- <h1>将插入到 footer slot 中</h1> -->
-      <!-- </template> -->
-    <!-- </NamedSlotDemo> -->
+    <NamedSlotDemo>
+      <template v-slot:header>
+        <h1>将插入到 header slot 中</h1>
+      </template>
+      <template v-slot:footer>
+        <h1>将插入到 footer slot 中</h1>
+      </template>
+    </NamedSlotDemo>
 
 
     <!-- 动态组件 -->
@@ -62,9 +60,9 @@
 // import CustomVModel from './CustomVModel'
 // import NextTick from './NextTick'
 
-import SlotDemo from './SlotDemo'
+// import SlotDemo from './SlotDemo'
 // import ScopedSlotDemo from './ScopedSlotDemo'
-// import NamedSlotDemo from './NamedSlotDemo'
+import NamedSlotDemo from './NamedSlotDemo'
 
 // // 动态组件
 // import NextTick from './NextTick'
@@ -78,9 +76,9 @@ export default {
   components: {
     // CustomVModel,
     // NextTick,
-    SlotDemo,
+    // SlotDemo,
     // ScopedSlotDemo,
-    // NamedSlotDemo,
+    NamedSlotDemo,
 
     // // 动态组件
     // NextTick,
