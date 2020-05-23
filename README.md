@@ -229,7 +229,7 @@
 
   - 父子组件 props $emit
 
-  - 兄弟组件 event.$on event.$off event.$emit
+  - 兄弟组件 ```event.$on event.$off event.$emit```
 
   - vuex
 
